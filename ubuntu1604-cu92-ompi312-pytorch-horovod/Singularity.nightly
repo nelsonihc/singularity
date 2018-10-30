@@ -11,6 +11,6 @@ From: nelsonihc/singularity:base
     export LC_ALL=C.UTF-8
     export PATH=/opt/conda/bin:$PATH
 
-    conda install -y pytorch torchvision cuda92 ignite -c pytorch
+    conda install -y pytorch-nightly cuda92 -c pytorch
     HOROVOD_GPU_ALLREDUCE=NCCL pip install --no-cache horovod
-    pip install augmentor tensorboard tensorboardX PyHamcrest
+    pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
