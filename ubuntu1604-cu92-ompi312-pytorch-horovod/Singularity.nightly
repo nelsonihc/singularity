@@ -10,10 +10,11 @@ From: nelsonihc/singularity:base
     export LANG=C.UTF-8
     export LC_ALL=C.UTF-8
     export PATH=/opt/conda/bin:$PATH
-	export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
     conda install -y pytorch-nightly cuda92 -c pytorch
     pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
+
+    ldconfig /usr/local/cuda/lib64/stubs
 
     cd /tmp
     git clone https://github.com/uber/horovod.git -b v0.15.1
@@ -23,3 +24,5 @@ From: nelsonihc/singularity:base
     git clone https://github.com/pytorch/ignite.git
     cd ignite && python setup.py install --prefix=/opt/conda
     rm -r /tmp/ignite
+
+    ldconfig
