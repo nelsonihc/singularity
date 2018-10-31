@@ -26,7 +26,6 @@ From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
           libsm6 \
           libxrender1 \
           libfontconfig1 \
-          libibcm1 \
           libibverbs1 \
           ibverbs-utils \
           librdmacm1 \
@@ -56,9 +55,10 @@ From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
           ibacm \
           infiniband-diags \
           ibutils \
-          libibverbs-dev \
-          libtorque2-dev
-
+          libibverbs-dev
+    
+    apt upgrade -y
+    
     rm -rf /var/lib/apt/lists/*
 
     cd ~ && \
