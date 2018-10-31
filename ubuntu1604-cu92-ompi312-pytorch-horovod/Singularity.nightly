@@ -12,5 +12,13 @@ From: nelsonihc/singularity:base
     export PATH=/opt/conda/bin:$PATH
 
     conda install -y pytorch-nightly cuda92 -c pytorch
-    HOROVOD_GPU_ALLREDUCE=NCCL pip install --no-cache horovod
     pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
+    
+    cd /tmp
+    git clone https://github.com/uber/horovod.git -b v0.15.1
+    cd horovod && HOROVOD_GPU_ALLREDUCE=NCCL python setup.py install --prefix=/opt/conda
+    rm -r /tmp/horovod
+
+    git clone https://github.com/pytorch/ignite.git
+    cd ignite && python setup.py install --prefix=/opt/conda
+    rm -r /tmp/ignite
