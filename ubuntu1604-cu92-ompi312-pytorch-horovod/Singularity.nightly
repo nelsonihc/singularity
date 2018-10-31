@@ -89,7 +89,7 @@ From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
     ldconfig /usr/local/cuda/lib64/stubs
 
     cd /tmp
-    git clone https://github.com/uber/horovod.git -b v0.15.1
+    git clone https://github.com/uber/horovod.git
     cd horovod && HOROVOD_GPU_ALLREDUCE=NCCL python setup.py install --prefix=/opt/conda
     rm -r /tmp/horovod
 
