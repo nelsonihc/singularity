@@ -75,3 +75,9 @@ From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
        /opt/conda/bin/conda clean -tipsy && \
        ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
+    /opt/conda/bin/conda activate
+
+    # hotfix: matplotlib error
+    
+    /opt/conda/bin/conda uninstall -y libxcb matplotlib
+    pip install matplotlib
