@@ -2,14 +2,8 @@ BootStrap: shub
 From: nelsonihc/singularity:base1804
 
 %environment
-    export LANG=C.UTF-8
-    export LC_ALL=C.UTF-8
-    export PATH=/opt/conda/bin:$PATH
 
 %post
-    export LANG=C.UTF-8
-    export LC_ALL=C.UTF-8
-    export PATH=/opt/conda/bin:$PATH
 
     conda install -y pytorch-nightly cuda92 -c pytorch
     pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
