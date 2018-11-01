@@ -14,44 +14,44 @@ From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
           curl \
           vim \
           ca-certificates \
-          libjpeg-dev \
-          libpng-dev \
-          libglib2.0-0 \
-          libgl1-mesa-glx \
-          libxext6 \
-          libsm6 \
-          libxrender1 \
-          libfontconfig1 \
-          libibverbs1 \
-          ibverbs-utils \
-          librdmacm1 \
-          rdmacm-utils \
-          libdapl2 \
+          build-essential \
+          cmake \
+          git mercurial subversion \
+          curl \
+          vim \
+          ca-certificates \
+          ibacm \
           ibsim-utils \
           ibutils \
+          ibverbs-utils \
+          infiniband-diags \
           libcxgb3-1 \
+          libdapl2 \
+          libfontconfig1 \
+          libgl1-mesa-glx \
+          libglib2.0-0 \
           libibmad5 \
           libibumad3 \
-          libmlx4-1 \
-          libmthca1 \
-          libnes1 \
-          infiniband-diags \
-          mstflint \
-          opensm \
-          libopensm5a \
-          perftest \
-          srptools \
-          rdmacm-utils \
+          libibverbs-dev \
+          libibverbs1 \
           libipathverbs1 \
-          libmthca1 \
+          libjpeg-dev \
           libmlx4-1 \
           libmlx5-1 \
+          libmthca1 \
           libnes1 \
+          libopensm5a \
+          libpng-dev \
           librdmacm1 \
-          ibacm \
-          infiniband-diags \
-          ibutils \
-          libibverbs-dev
+          libsm6 \
+          libx11-xcb1 \
+          libxext6 \
+          libxrender1 \
+          mstflint \
+          opensm \
+          perftest \
+          rdmacm-utils \
+          srptools
 
     rm -rf /var/lib/apt/lists/*
 
