@@ -2,10 +2,15 @@ BootStrap: docker
 From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
 
 %environment
+    export LANG=C.UTF-8
+    export LC_ALL=C.UTF-8
     . /opt/conda/etc/profile.d/conda.sh
     conda activate
 
 %post
+    export LANG=C.UTF-8
+    export LC_ALL=C.UTF-8
+    
     apt update && apt install -y \
           build-essential \
           cmake \
