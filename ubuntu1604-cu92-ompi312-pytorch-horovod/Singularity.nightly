@@ -4,6 +4,8 @@ From: nelsonihc/singularity:base1804
 %environment
 
 %post
+    . /opt/conda/etc/profile.d/conda.sh
+    conda activate
 
     conda install -y pytorch-nightly cuda92 -c pytorch
     pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
