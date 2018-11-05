@@ -12,14 +12,14 @@ From: nelsonihc/singularity:base1804
 
     ldconfig /usr/local/cuda/lib64/stubs
 
-    cd /tmp
-    git clone https://github.com/uber/horovod.git
-    cd horovod && HOROVOD_GPU_ALLREDUCE=NCCL python setup.py install --prefix=/opt/conda
+    cd /tmp && \
+    git clone https://github.com/uber/horovod.git && \
+    cd horovod && HOROVOD_GPU_ALLREDUCE=NCCL python setup.py install --prefix=/opt/conda && \
     rm -r /tmp/horovod
 
-    cd /tmp
-    git clone https://github.com/pytorch/ignite.git
-    cd ignite && python setup.py install --prefix=/opt/conda
+    cd /tmp && \
+    git clone https://github.com/pytorch/ignite.git && \
+    cd ignite && python setup.py install --prefix=/opt/conda && \
     rm -r /tmp/ignite
 
     ldconfig
