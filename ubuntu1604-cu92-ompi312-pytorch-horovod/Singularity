@@ -1,5 +1,5 @@
 BootStrap: shub
-From: nelsonihc/singularity:base
+From: nelsonihc/singularity:base1604
 
 %environment
     export LANG=C.UTF-8

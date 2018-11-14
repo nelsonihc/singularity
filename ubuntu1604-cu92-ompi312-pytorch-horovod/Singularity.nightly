@@ -8,7 +8,18 @@ From: nelsonihc/singularity:base1804
     conda activate
 
     conda install -y pytorch-nightly cuda92 -c pytorch
-    pip install augmentor PyHamcrest pretrainedmodels PyYAML pycocotools tensorboard tensorboardX tqdm
+
+    pip install \
+        augmentor \
+        PyHamcrest \
+        pretrainedmodels \
+        PyYAML \
+        pycocotools \
+        tensorboard \
+        tensorboardX \
+        tqdm \
+        pybind11 \
+        cppimport
 
     ldconfig /usr/local/cuda/lib64/stubs
 
@@ -23,3 +34,6 @@ From: nelsonihc/singularity:base1804
     rm -r /tmp/ignite
 
     ldconfig
+
+    # extra pips
+
